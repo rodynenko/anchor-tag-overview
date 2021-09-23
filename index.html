@@ -140,7 +140,23 @@
 
     <section class="slide">
         <h2>rel</h2>
-
+        <ul style="column-count: 2;">
+            <li>alternate</li>
+            <li>author</li>
+            <li>bookmark</li>
+            <li>external</li>
+            <li>help</li>
+            <li>license</li>
+            <li>next</li>
+            <li><span class="green-bg">nofollow</span></li>
+            <li><span class="green-bg">noopener</span></li>
+            <li><span class="green-bg">noreferrer</span></li>
+            <li>opener</li>
+            <li>prev</li>
+            <li>search</li>
+            <li>tag</li>
+        </ul>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel" class="copyright" target="_blank">Attributes: rel</a>
     </section>
 
     <section class="slide">
@@ -158,8 +174,8 @@
         <h2>type</h2>
         <pre>
                 <code>
-                    <a href="https://wsd.events" type="text/html">
-                        Web Standards Days
+                    <a href="https://dnb.no" type="text/html">
+                        DNB no
                     </a>
 
                     <a href="doc.pdf" type="application/pdf">
@@ -212,7 +228,7 @@
             <br />
             ⬇️
             <br />
-            <span class="gray">https://</span>https://xn--d1acpjx3f.xn--p1ai/
+            <span class="gray">https://</span>xn--d1acpjx3f.xn--p1ai/
         </h2>
         <a class="copyright" target="_blank" href="https://www.rfc-editor.org/rfc/rfc3987.txt">Internationalized Resource
             Identifier (IRI)</a>
@@ -243,15 +259,15 @@
     </section>
 
     <section class="slide">
-        <pre class="center">
-                <code>
-                    mailto:taras.rodyneneko@dnb.no
-                        ?cc=
-                        &bcc=
-                        &subject=When%20we%20skip%20IE
-                        &body=Someday%20in%20future
-                </code>
-            </pre>
+        <pre>
+            <code>
+mailto:taras.rodyneneko@dnb.no
+    ?cc=support@dnb.no
+    &amp;bcc=editors@dnb.no
+    &amp;subject=When%20do%20we%20skip%20IE
+    &amp;body=Someday%20in%20future
+            </code>
+        </pre>
     </section>
 
     <section class="slide">
@@ -265,11 +281,11 @@
     </section>
 
     <section class="slide">
-        <pre class="center">
-                <code>
-                    <a href="javascript:void(0);">click me</a>
-                </code>
-            </pre>
+        <pre>
+            <code>
+&lt;a href=&quot;javascript:void(0);&quot;&gt;click me&lt;/a&gt;
+            </code>
+        </pre>
         <a href="javascript:alert('Javascript');">Javascript</a>
     </section>
 
@@ -287,10 +303,10 @@
     </section>
 
     <section class="slide">
-        <pre class="center">
+        <pre>
                 <code>
-                    < base target="_top"
-                        href="https://dnb.no/articles/">
+&lt;base target=&quot;_top&quot;
+    href=&quot;https://dnb.no/articles/&quot;&gt;
                 </code>
             </pre>
     </section>
@@ -298,27 +314,31 @@
     <section class="slide">
         <pre>
             <code>
-                <head>
-                    < base target="_top" href="https://dnb.no/articles/">
-                </head>
+&lt;head&gt;
+    &lt;base target=&quot;_top&quot; href=&quot;https://dnb.no/articles/&quot;&gt;
+&lt;/head&gt;
 
-                <body>
-                    <a href="page-1">Article</a>
-                    <!-- https://dnb.no/articles/page-1 -->
+&lt;body&gt;
+    &lt;a href=&quot;page-1&quot;&gt;Article&lt;/a&gt;
+    &lt;!-- https://dnb.no/articles/page-1 --&gt;
 
-                    <a href="../index.html">Main page</a>
-                    <!-- https://dnb.no/index.html -->
-                </body>
+    &lt;a href=&quot;../index.html&quot;&gt;Main page&lt;/a&gt;
+    &lt;!-- https://dnb.no/index.html --&gt;
+&lt;/body&gt;
             </code>
         </pre>
     </section>
 
-    <section class="slide">
-        link text open
+    <section class="slide title">
+        <h2>Security (again)</h2>
     </section>
 
     <section class="slide">
-        focus
+        <h2 class="center"></h2>
+    </section>
+
+    <section class="slide">
+        
     </section>
 
     <section class="slide title">
@@ -355,7 +375,7 @@
     </section>
 
     <section class="slide">
-        <h2 class="center">pseudoclasses</h2>
+        <h2 class="center">Pseudo-classes</h2>
     </section>
 
     <section class="slide">
@@ -422,12 +442,12 @@
     <section class="slide">
         <h2>Allowed properties for :visited</h2>
         <ul>
-            <li>color</li>
-            <li>background-color</li>
-            <li>border-color (and its sub-properties)</li>
-            <li>column-rule-color</li>
-            <li>outline-color</li>
-            <li>The color parts of the fill and stroke attributes</li>
+            <li><span class="green-bg">color</span></li>
+            <li><span class="green-bg">background-color</span></li>
+            <li><span class="green-bg">border-color</span> (and its sub-properties)</li>
+            <li><span class="green-bg">column-rule-color</span></li>
+            <li><span class="green-bg">outline-color</span></li>
+            <li>The color parts of the <span class="green-bg">fill</span> and <span class="green-bg">stroke</span> attributes</li>
         </ul>
         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector#limits_to_visited_link_styles"
             target="_blank" class="copyright">Limits to visited link styles</a>
@@ -435,22 +455,22 @@
 
     <section class="slide">
         <pre>
+            <code>
+&lt;a class=&quot;test&quot; href=&quot;.&quot;&gt;Visited test&lt;/a&gt;
+            </code>
+        </pre>
+        <br />
+        <pre>
                 <code>
-                    <a class="test" href=".">Visited test</a>
+.test { color: red; }
+.test:visited { color: blue; }
                 </code>
             </pre>
         <br />
         <pre>
                 <code>
-                    .test { color: red; }
-                    .test:visited { color: blue; }
-                </code>
-            </pre>
-        <br />
-        <pre>
-                <code>
-                    var link = document.querySelector('.test');
-                    window.getComputedStyle(link).color; // rgb(255, 0, 0)
+var link = document.querySelector(&#39;.test&#39;);
+window.getComputedStyle(link).color; // rgb(255, 0, 0)
                 </code>
             </pre>
     </section>
@@ -547,17 +567,17 @@
     </section>
 
     <section class="slide">
-        <pre class="center">
-                <code class="center">
-                    <a href="#a">
-                        Foo
-                        <object type="owo/uwu">
-                            <a href="#b">
-                                Bar
-                            </a>
-                        </object>
-                        Baz
-                    </a>
+        <pre>
+                <code>
+&lt;a href=&quot;#a&quot;&gt;
+    Foo
+    &lt;object type=&quot;owo/uwu&quot;&gt;
+        &lt;a href=&quot;#b&quot;&gt;
+            Bar
+        &lt;/a&gt;
+    &lt;/object&gt;
+    Baz
+&lt;/a&gt;
                 </code>
             </pre>
         <a class="copyright" href="https://www.kizu.ru/nested-links/" target="_blank">Nested Links</a>
@@ -570,9 +590,8 @@
     <section class="slide">
         <h2>Thanks</h2>
         <ul>
-            <li>Source of </li>
-            <li>MDN</li>
-            <li></li>
+            <li>Inspired by <a href="">Web Standards</a></li>
+            <li>A lot from <a href="https://developer.mozilla.org/">MDN</a> and others</li>
         </ul>
     </section>
 
