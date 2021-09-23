@@ -26,6 +26,11 @@ pre.center code {
 	width: auto;
 }
 
+pre.center.code code {
+	display: inline-block;
+	text-align: left;
+}
+
 .cover {
 	position: absolute;
 	top: 50%;
@@ -90,11 +95,6 @@ pre.center code {
 
 .shower.list .slide a {
 	pointer-events: auto;
-}
-
-.test-link.test-link,
-.test-visited.test-visited {
-	background-image: none;
 }
 
 .test-link.test-link:link {

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Shower Presentation Engine</title>
+    <title>Anchor tag</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/github.min.css">
+    <link rel="stylesheet" href="/github.min.css">
     <link rel="stylesheet" href="/custom.css">
     <style>
         .shower {
@@ -30,7 +30,29 @@
     </section>
 
     <section class="slide">
-        <h2>History (1991)</h2>
+        <img class="cover" src="/images/www.png" style="margin: 0 15px;" />
+    </section>
+
+    <section class="slide">
+        <h2>Tags</h2>
+        <ul style="column-count: 2;">
+            <li>&lt;TITLE&gt;</li>
+            <li>&lt;NEXTID 11&gt;</li>
+            <li>&lt;A NAME=xxx HREF=XXX&gt;</li>
+            <li>&lt;ISINDEX&gt;</li>
+            <li>&lt;PLAINTEXT&gt;</li>
+            <li>&lt;LISTING&gt;</li>
+            <li>&lt;P&gt;</li>
+            <li>&lt;H1&gt;-&lt;H6&gt;</li>
+            <li>&lt;ADDRESS&gt;</li>
+            <li>&lt;DL&gt; &lt;DT&gt; &lt;DD&gt;</li>
+            <li>&lt;UL&gt; &lt;LI&gt;</li>
+        </ul>
+        <a class="copyright" href="https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html">HTML Tags</a>
+    </section>
+
+    <section class="slide">
+        <h2>1991</h2>
         <pre>
                 <code class="xml">
 &lt;A HREF=&quot;page.html&quot;
@@ -38,15 +60,6 @@
    TYPE=void&gt;
     ...
 &lt;/A&gt;
-                </code>
-            </pre>
-    </section>
-
-    <section class="slide">
-        <h2>History (1991)</h2>
-        <pre>
-                <code>
-
                 </code>
             </pre>
     </section>
@@ -71,8 +84,7 @@
     <section class="slide">
         <h2>Why we need &lt;a&gt;</h2>
         <p>The &lt;a&gt; HTML element (or anchor element), with its href attribute, creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.</p>
-        <a class="copyright" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/A"
-                target="_blank">&lt;a&gt;: The Anchor element - MDN</a>
+        <a class="copyright" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/A" target="_blank">&lt;a&gt;: The Anchor element - MDN</a>
     </section>
 
 
@@ -105,6 +117,7 @@
 &lt;/a&gt;
             </code>
         </pre>
+        <p><a href="/images/local.pdf" download>Same-origin PDF</a> AND <a href="https://www.dnb.no/portalfront/nedlast/no/markets/analyser-rapporter/engelske/energy-daily/ED190621.pdf" download>External PDF</a></p>
     </section>
 
     <section class="slide">
@@ -130,8 +143,9 @@
 &lt;a href=&quot;ping.html&quot; ping=&quot;./tracker&quot;&gt;Ping Link&lt;/a&gt;
             </code>
         </pre>
-        <a href="ping.html" ping="https://postman-echo.com/post">ping</a>
-        <a href="#header" ping="https://postman-echo.com/post">ping id</a>
+        <p>
+            <a href="ping.html" ping="https://postman-echo.com/post">Ping me</a>
+        </p>
     </section>
 
     <section class="slide">
@@ -260,13 +274,13 @@
     </section>
 
     <section class="slide">
-        <h2 class="center"><span class="green-bg">mailto:</span>taras.rodyneneko@dnb.no</h2>
+        <h2 class="center"><span class="green-bg">mailto:</span> taras.rodynenko@dnb.no</h2>
     </section>
 
     <section class="slide">
-        <pre>
+        <pre class="center code">
             <code>
-mailto:taras.rodyneneko@dnb.no
+mailto:taras.rodynenko@dnb.no
     ?cc=support@dnb.no
     &amp;bcc=editors@dnb.no
     &amp;subject=When%20do%20we%20skip%20IE
@@ -308,12 +322,12 @@ mailto:taras.rodyneneko@dnb.no
     </section>
 
     <section class="slide">
-        <pre>
-                <code>
+        <pre class="center code">
+            <code class="xml">
 &lt;base target=&quot;_top&quot;
     href=&quot;https://dnb.no/articles/&quot;&gt;
-                </code>
-            </pre>
+            </code>
+        </pre>
     </section>
 
     <section class="slide">
@@ -339,11 +353,62 @@ mailto:taras.rodyneneko@dnb.no
     </section>
 
     <section class="slide">
-        <h2 class="center"></h2>
+        <img class="cover" src="/images/no-referrer.png" />
     </section>
 
     <section class="slide">
+        <pre class="center">
+            <code>
+&lt;a href=&quot;my-site.com&quot;
+   rel=&quot;noreferrer&quot;&gt;
+            </code>
+        </pre>
+    </section>
 
+    <section class="slide">
+        <h2>window.opener</h2>
+        <p>on the page that was opened in a new tab</p>
+        <pre>
+            <code>
+window.opener.location =
+    &#39;https://i-have-hacked-you-because-i-can.com&#39;;
+            </code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <pre class="center code">
+            <code>
+&lt;a href=&quot;somebody-site.com&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;&gt;
+            </code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <pre class="center code">
+            <code>
+const win = window.open(url, &#39;_blank&#39;);
+
+if (win) {
+  win.opener = null;
+}
+            </code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2 class="center">SEO and PageRank</h2>
+    </section>
+
+    <section class="slide">
+        <pre class="center code">
+            <code>
+&lt;a href=&quot;another-website.com&quot;
+    rel=&quot;nofollow&quot;&gt;
+            </code>
+        </pre>
     </section>
 
     <section class="slide title">
@@ -396,7 +461,7 @@ a:link {
         <ul>
             <li><a class="test-link">Without href</a></li>
             <li><a class="test-link" href="https://127.0.0.1/never-seen">Not visited</a></li>
-            <li><a class="test-link" href="https://dnb.no">Visited</a></li>
+            <li><a class="test-link" href="https://finn.no">Visited</a></li>
         </ul>
     </section>
 
@@ -587,7 +652,7 @@ a:hover {
     <section class="slide">
         <h2>Thanks</h2>
         <ul>
-            <li>Inspired by <a href="">Web Standards</a></li>
+            <li>Inspired by <a href="https://wsd.events/2019-12-07/anchor">Web Standards</a></li>
             <li>A lot from <a href="https://developer.mozilla.org/">MDN</a> and others</li>
         </ul>
     </section>
@@ -596,10 +661,8 @@ a:hover {
 
     <div class="progress"></div>
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script src="/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script src="node_modules/@shower/core/dist/shower.js"></script>
-
-
 </body>
 </html>
