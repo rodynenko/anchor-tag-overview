@@ -2,6 +2,7 @@
 	--color-accent-yellow: #FDBB31;
 	--color-mint-green: #A5E1D2;
 	--color-sea-green: #007272;
+	--color-emerald-green: #14555A;
 }
 
 .main-header.main-header {
@@ -14,9 +15,15 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	width: 100%;
 	padding: 0 75px;
 	transform: translate(-50%, -50%);
 	text-align: center;
+	box-sizing: border-box;
+}
+
+pre.center code {
+	width: auto;
 }
 
 .cover {
@@ -29,19 +36,26 @@
 	max-height: 100%;
 }
 
-.copyright {
+.copyright.copyright {
 	position: absolute;
 	bottom: 20px;
 	right: 10px;
 	margin: 0;
 	font-size: 12px;
 	opacity: 0.7;
-	transform-origin: 0 100%;
-	transform: translateX(100%) rotate(-90deg);
+	transform: none;
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	background-image: none;
+	color: var(--color-sea-green);
 }
 
 .title {
-	background-color: var(--color-sea-green);
+	background-color: var(--color-emerald-green);
+}
+
+.title:after {
+	opacity: 0;
 }
 
 .slide.title h2 {
@@ -57,25 +71,44 @@
 }
 
 .green-bg {
-	background-color: #D2F0E9;
+	position: relative;
+	display: inline-block;
+}
+
+.green-bg:before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	left: -5px;
+	right: -5px;
+	top: 50%;
+	height: 1.2em;
+	transform: translateY(-50%);
+	border-radius: 2px;
+	background-color: var(--color-mint-green);
 }
 
 .shower.list .slide a {
 	pointer-events: auto;
 }
 
-.test-link:link {
+.test-link.test-link,
+.test-visited.test-visited {
+	background-image: none;
+}
+
+.test-link.test-link:link {
 	color: var(--color-accent-yellow);
 }
 
-.test-visited:link {
+.test-visited.test-visited:visited {
 	color: var(--color-accent-yellow);
 }
 
-.text-decoration-properties {
+.text-decoration-properties.text-decoration-properties {
 	text-decoration: underline red;
 	text-decoration-thickness: 10px;
-	text-decoration-offset: 6px;
+	text-underline-offset: 10px;
 }
 
 pre code.hljs {
@@ -86,6 +119,19 @@ pre code.hljs {
 	line-height: 1.5;
 }
 
+.slide a {
+	background-image: none;
+}
+
 .progress::before {
-	background-color: var(--color-mint-green);
+	background-color: var(--color-sea-green);
+}
+
+.slide::after {
+	left: auto;
+	right: 0;
+	padding-top: 0;
+	background-image: none;
+	height: var(--ribbon-size);
+	background-color: var(--color-sea-green);
 }

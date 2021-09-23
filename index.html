@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/github.min.css">
     <link rel="stylesheet" href="/custom.css">
     <style>
         .shower {
@@ -70,16 +70,11 @@
 
     <section class="slide">
         <h2>Why we need &lt;a&gt;</h2>
-        <p>The &lt;a&gt; HTML element (or anchor element), with its href attribute, creates a hyperlink to web pages, files,
-            email addresses, locations in the same page, or anything else a URL can address.</p>
+        <p>The &lt;a&gt; HTML element (or anchor element), with its href attribute, creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.</p>
         <a class="copyright" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/A"
                 target="_blank">&lt;a&gt;: The Anchor element - MDN</a>
     </section>
 
-    <section class="slide">
-        <h2></h2>
-
-    </section>
 
     <section class="slide title">
         <h2>Attributes</h2>
@@ -136,6 +131,7 @@
             </code>
         </pre>
         <a href="ping.html" ping="https://postman-echo.com/post">ping</a>
+        <a href="#header" ping="https://postman-echo.com/post">ping id</a>
     </section>
 
     <section class="slide">
@@ -162,10 +158,10 @@
     <section class="slide">
         <h2>target</h2>
         <ul>
-            <li>_blank — open in the new tab</li>
-            <li>_self — open in the current context</li>
-            <li>_parent — open in the parent context</li>
-            <li>_top — open in the top context</li>
+            <li><span class="green-bg">_blank</span> — open in the new tab</li>
+            <li><span class="green-bg">_self</span> — open in the current context</li>
+            <li><span class="green-bg">_parent</span> — open in the parent context</li>
+            <li><span class="green-bg">_top</span> — open in the top context</li>
             <li>iframe-name — open in the context with name='iframe-name'.</li>
         </ul>
     </section>
@@ -174,28 +170,33 @@
         <h2>type</h2>
         <pre>
                 <code>
-                    <a href="https://dnb.no" type="text/html">
-                        DNB no
-                    </a>
+&lt;a href=&quot;https://dnb.no&quot; type=&quot;text/html&quot;&gt;
+    DNB no
+&lt;/a&gt;
 
-                    <a href="doc.pdf" type="application/pdf">
-                        PDF
-                    </a>
+&lt;a href=&quot;doc.pdf&quot; type=&quot;application/pdf&quot;&gt;
+    PDF
+&lt;/a&gt;
                 </code>
             </pre>
     </section>
 
     <section class="slide">
         <h2>reffererpolicy</h2>
-        <p>Control access to Referer header</p>
+        <p>Control access to <span class="green-bg">Referer</span> header</p>
         <pre>
                 <code>
-                    <a href="https://some-site.com"
-                        referrerpolicy="no-referrer">
-                        External Resource
-                    </a>
-                </code>
-            </pre>
+&lt;a href=&quot;https://some-site.com&quot;
+    referrerpolicy=&quot;no-referrer&quot;&gt;
+    External Resource
+&lt;/a&gt;
+            </code>
+        </pre>
+        <p>
+            <a href="https://dnb.no">Without</a>
+            AND
+            <a href="https://dnb.no" referrerpolicy="no-referrer">With</a>
+        </p>
     </section>
 
     <section class="slide title">
@@ -225,9 +226,9 @@
     <section class="slide">
         <h2 class="center">
             <span class="gray">https://</span>яндекс.рф
-            <br />
+            <br /><br />
             ⬇️
-            <br />
+            <br /><br />
             <span class="gray">https://</span>xn--d1acpjx3f.xn--p1ai/
         </h2>
         <a class="copyright" target="_blank" href="https://www.rfc-editor.org/rfc/rfc3987.txt">Internationalized Resource
@@ -248,6 +249,10 @@
 
     <section class="slide">
         <h2 class="center">tel:+47Z1K0GU00</h2>
+    </section>
+
+    <section class="slide">
+        <img class="cover" src="/images/numeric-keypad.png" />
     </section>
 
     <section class="slide">
@@ -338,7 +343,7 @@ mailto:taras.rodyneneko@dnb.no
     </section>
 
     <section class="slide">
-        
+
     </section>
 
     <section class="slide title">
@@ -361,13 +366,14 @@ mailto:taras.rodyneneko@dnb.no
     <section class="slide">
         <pre class="center">
                 <code>
-                    touch-action: manipulation;
+touch-action: manipulation;
                 </code>
             </pre>
     </section>
 
     <section class="slide">
         <img class="cover" src="/images/touch-action.png" />
+        <a href="https://caniuse.com/css-touch-action" target="_blank" class="copyright">caniuse: touch-action</a>
     </section>
 
     <section class="slide title">
@@ -379,39 +385,35 @@ mailto:taras.rodyneneko@dnb.no
     </section>
 
     <section class="slide">
-        <h2 class="center">:link</h2>
+        <h2>:link</h2>
+        <pre>
+            <code>
+a:link {
+    color: var(--color-accent-yellow);
+}
+            </code>
+        </pre>
+        <ul>
+            <li><a class="test-link">Without href</a></li>
+            <li><a class="test-link" href="https://127.0.0.1/never-seen">Not visited</a></li>
+            <li><a class="test-link" href="https://dnb.no">Visited</a></li>
+        </ul>
     </section>
 
     <section class="slide">
-        <h2 class="center">:link</h2>
+        <h2>:visited</h2>
         <pre>
-                <code>
-                    a:link {
-                        color: var(--color-accent-yellow);
-                    }
-                </code>
-            </pre>
-        <p>
-            <a class="test-link">Without href</a>
-            <a class="test-link" href="https://127.0.0.1/never-seen">Not visited</a>
-            <a class="test-link" href="https://dnb.no">Visited</a>
-        </p>
-    </section>
-
-    <section class="slide">
-        <h2 class="center">:visited</h2>
-        <pre>
-                <code>
-                    a:visited {
-                        color: var(--color-accent-yellow);
-                    }
-                </code>
-            </pre>
-        <p>
-            <a class="test-visited">Without href</a>
-            <a class="test-visited" href="https://127.0.0.1/never-seen">Not visited</a>
-            <a class="test-visited" href="https://dnb.no">Visited</a>
-        </p>
+            <code>
+a:visited {
+    color: var(--color-accent-yellow);
+}
+            </code>
+        </pre>
+        <ul>
+            <li><a class="test-visited">Without href</a></li>
+            <li><a class="test-visited" href="https://127.0.0.1/never-seen">Not visited</a></li>
+            <li><a class="test-visited" href="https://dnb.no">Visited</a></li>
+        </ul>
     </section>
 
     <section class="slide">
@@ -420,21 +422,20 @@ mailto:taras.rodyneneko@dnb.no
 
     <section class="slide">
         <pre>
-                <code>
-                    <a class="hidden finn" href="https://finn.no"></a>
-                    <a class="hidden boliglan" href="https://dnb.no/boliglan"></a>
-                    <a class="hidden shoes" href="https://shoes.buy"></a>
-                </code>
-            </pre>
-        <br />
+            <code>
+&lt;a class=&quot;hidden finn&quot; href=&quot;https://finn.no&quot;&gt;
+&lt;a class=&quot;hidden boliglan&quot; href=&quot;https://dnb.no/boliglan&quot;&gt;
+&lt;a class=&quot;hidden shoes&quot; href=&quot;https://shoes.buy&quot;&gt;
+            </code>
+        </pre>
         <pre class="next">
                 <code>
-                    .finn:visited {
-                        background-image: url('track-finn?uuid=000')
-                    }
-                    .boliglan:visited {
-                        background-image: url('track-url-boliglan?uuid=000')
-                    }
+.finn:visited {
+    background-image: url('track-finn?uuid=000')
+}
+.boliglan:visited {
+    background-image: url('track-url-boliglan?uuid=000')
+}
                 </code>
             </pre>
     </section>
@@ -459,14 +460,12 @@ mailto:taras.rodyneneko@dnb.no
 &lt;a class=&quot;test&quot; href=&quot;.&quot;&gt;Visited test&lt;/a&gt;
             </code>
         </pre>
-        <br />
         <pre>
                 <code>
 .test { color: red; }
 .test:visited { color: blue; }
                 </code>
             </pre>
-        <br />
         <pre>
                 <code>
 var link = document.querySelector(&#39;.test&#39;);
@@ -478,25 +477,25 @@ window.getComputedStyle(link).color; // rgb(255, 0, 0)
     <section class="slide">
         <h2>:hover</h2>
         <pre>
-                <code>
-                    a:hover {
-                        color: var(--color-accent-yellow);
-                    }
-                </code>
-            </pre>
+            <code>
+a:hover {
+    color: var(--color-accent-yellow);
+}
+            </code>
+        </pre>
     </section>
 
     <section class="slide">
         <h2>:active, :focus</h2>
         <pre>
                 <code>
-                    .link:active {
-                        color: #d00;
-                    }
+.link:active {
+    color: #d00;
+}
 
-                    .utilityfocus .link:focus {
-                        outline: 2px solid #fc0;
-                    }
+.utilityfocus .link:focus {
+    outline: 2px solid #fc0;
+}
                 </code>
             </pre>
     </section>
@@ -519,12 +518,11 @@ window.getComputedStyle(link).color; // rgb(255, 0, 0)
     <section class="slide">
         <h2>text-decoration-skip-ink: auto</h2>
         <p>
-            <a href="#" style="text-decoration-skip-ink: auto;">pipeline stages</a>
+            <a href="#" style="text-decoration-skip-ink: auto; text-decoration: underline;">pipeline stages</a>
             <br />
-            <a href="#" style="text-decoration-skip-ink: none;">pipeline stages</a>
+            <a href="#" style="text-decoration-skip-ink: none; text-decoration: underline;">pipeline stages</a>
         </p>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-skip-ink" target="_blank"
-            class="copyright">text-decoration-skip-ink</a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-skip-ink" target="_blank" class="copyright">text-decoration-skip-ink</a>
     </section>
 
     <section class="slide">
@@ -535,11 +533,11 @@ window.getComputedStyle(link).color; // rgb(255, 0, 0)
         <h2>text-decoration-...</h2>
         <pre>
                 <code>
-                    .link {
-                        text-decoration: underline red;
-                        text-decoration-thickness: 10px;
-                        text-decoration-offset: 6px;
-                    }
+.link {
+    text-decoration: underline red;
+    text-decoration-thickness: 10px;
+    text-underline-offset: 10px;
+}
                 </code>
             </pre>
         <p>
@@ -553,8 +551,7 @@ window.getComputedStyle(link).color; // rgb(255, 0, 0)
 
     <section class="slide">
         <img class="cover" src="images/nested-links.png">
-        <a class="copyright" href="https://www.w3.org/TR/REC-html40/struct/links#idx-link-6" target="_blank">Nested
-            links</a>
+        <a class="copyright" href="https://www.w3.org/TR/REC-html40/struct/links#idx-link-6" target="_blank">Nested links</a>
     </section>
 
     <section class="slide">
@@ -584,7 +581,7 @@ window.getComputedStyle(link).color; // rgb(255, 0, 0)
     </section>
 
     <section class="slide">
-        <h2>Thanks 🙂</h2>
+        <h2 class="center">Thanks 🙂</h2>
     </section>
 
     <section class="slide">
